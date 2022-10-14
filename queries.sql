@@ -1,4 +1,7 @@
--- 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
+-- 1. List the following details of each employee:
+    -- employee number,
+    -- last name,
+    -- first name, sex, and salary.
 
 SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 FROM employees AS e
@@ -66,4 +69,4 @@ WHERE dept_name = 'Sales' OR dept_name = 'Development';
 SELECT last_name, count(last_name)
 FROM employees
 GROUP BY last_name
-ORDER BY last_name DESC;
+ORDER BY count(last_name) DESC;
